@@ -13,7 +13,6 @@ This algorithm will take three words.
     B A L L<br>
            ----------<br>
            G A M E S<br>
-
 Output:
 It will show which letter holds which number from 0 – 9.
 For this case it is like this.
@@ -28,7 +27,6 @@ For this problem, we will define a node, which contains a letter and its corresp
 isValid(nodeList, count, word1, word2, word3)<br>
 
 Input − A list of nodes, the number of elements in the node list and three words.<br>
-
 Output − True if the sum of the value for word1 and word2 is same as word3 value.<br>
 
 Begin<br>
@@ -80,11 +78,9 @@ from itertools import permutations
 def solve_cryptarithmetic():
     for perm in permutations(range(10), 8):
         S, E, N, D, M, O, R, Y = perm
-
         # Check for leading zeros
         if S == 0 or M == 0:
             continue
-
         # Check the equation constraints
         SEND = 1000 * S + 100 * E + 10 * N + D
         MORE = 1000 * M + 100 * O + 10 * R + E
@@ -92,9 +88,7 @@ def solve_cryptarithmetic():
 
         if SEND + MORE == MONEY:
             return SEND, MORE, MONEY
-
     return None
-
 # Call the function
 solution = solve_cryptarithmetic()
 
